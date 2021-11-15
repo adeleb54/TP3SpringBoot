@@ -36,4 +36,16 @@ public class Pet {
     public int getAge() {
         return age;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAnimal(String animal) {
+        this.animal = animal;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }

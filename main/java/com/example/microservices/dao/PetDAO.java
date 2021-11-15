@@ -50,4 +50,27 @@ public class PetDAO implements IPetDAO{
     public void save(Pet pet) {
         allPets.put(pet.getId(), pet);
     }
+
+    /**
+     * Met à jour les informations d'un animal
+     * @param id identifiant du profil de l'animal à mettre à jour
+     * @param pet nouveau profil de l'aniaml
+     * @return Le nouveau profil
+     */
+    @Override
+    public Pet updateCard(int id, Pet pet) {
+        allPets.get(id).setName(pet.getName());
+        allPets.get(id).setAnimal(pet.getAnimal());
+        allPets.get(id).setAge(pet.getAge());
+        return allPets.get(id);
+    }
+
+    /**
+     * Supprime un animal de la base de données
+     * @param id identifiant du profil de l'animal a supprimé
+     */
+    @Override
+    public void deletePet(int id) {
+        allPets.remove(id);
+    }
 }
